@@ -8,7 +8,7 @@ console.log('Number of categories:', itemMasEl.length);
 
 
 itemMasEl.forEach((item) => console.log('Category:', item.firstElementChild.textContent, 
-'Elements:', item.lastElementChild))
+'Elements:', item.lastElementChild.children.length))
 
 
 // item.lastElementChild.length
