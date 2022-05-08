@@ -14,17 +14,20 @@ const images = [
 ];
 
 
-const galaryEl = document.querySelector('.gallery');
+const galleryEl = document.querySelector('.gallery');
+
+const galleryMarkup = images.map((image) => `<li> <img src= ${image.url} alt=${image.alt} /> </li>`).join('')
+
+galleryEl.insertAdjacentHTML('afterend', galleryMarkup)
+// images.forEach((image) => {
+ // galaryEl.insertAdjacentHTML('afterend', `<li> <img src= ${image.url} alt=${image.alt} /> </li>`);
+
+// })
 
 
-images.forEach((image) => {
-  const imageLi = document.createElement('li');
-  const imageEl = document.createElement('img');
-  imageEl.src = `image.url`;
-  imageEl.alt = `image.alt`;
-  imageLi.append(imageEl);
-  galaryEl.insertAdjacentHTML('afterend', `imageLi`);
+galleryEl.style.display = 'flex';
+galleryEl.style.flexDirection = 'row';
+galleryEl.style.justifyContent = 'space-between';
 
-})
 
 
