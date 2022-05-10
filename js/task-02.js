@@ -17,6 +17,7 @@ const makeIngridients = (ingredientElements) => {
 
     return ingredientsLi;
   });
+}
 
-  const ingredientElementsAdd = makeIngridients(ingredients);
-  ingredientsEl.append(...ingredientElementsAdd);
+const ingredientElementsAdd = makeIngridients(ingredients);
+ingredientsEl.append(...ingredientElementsAdd)
