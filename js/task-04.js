@@ -1,8 +1,9 @@
 
 
-const incrementListenBtn = document.querySelector('increment');
-const decrementListenBtn = document.querySelector('decrement');
-const counterValue = 0;
+const incrementListenBtn = document.querySelector("button[data-action='increment']");
+const decrementListenBtn = document.querySelector("button[data-action='decrement']");
+
+let counterValue = 0;
 
 
 function onIncrementButtonClick () {
