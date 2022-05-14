@@ -3,7 +3,7 @@ function getRandomHexColor() {
 }
 
 const refs = {
-  bodyBgc: document.querySelector('.widget'),
+  bodyBgc: document.querySelector('body'),
   onChangeColorBtn: document.querySelector('.change-color'),
   onChangeColorText: document.querySelector('.color'),
 

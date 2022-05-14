@@ -13,7 +13,7 @@ function onFormSubmit(event) {
     const password = formElements.password.value;
 
     if (mail === '' || password === '') {
-        console.log('Alert, все поля должны быть заполнены.')
+       return alert('Все поля должны быть заполнены')
         
     }
 
