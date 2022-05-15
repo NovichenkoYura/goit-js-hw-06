@@ -7,14 +7,24 @@ const refs = {
   inputAmount: document.querySelector('input'),
   createBtn: document.querySelector("button[data-create]"),
   destroyBtn: document.querySelector("button[data-destroy]"),
-} 
+}
 
 refs.createBtn.addEventListener('click', inputAmountChange);
 refs.destroyBtn.addEventListener('click', clearBoxes);
 
 function inputAmountChange(event) {
-  let amount = Number(refs.inputAmount.value);
-  createBoxes(amount);
+  createBoxes(refs.inputAmount.value);
+}
+
+function handleCreate(amount) {
+  amount = Number(amount);
+  curLen = document.querySelector('#boxes').children.length;
+  if (curLen = 0) {
+    createBoxes(amount);
+  } else if (curLen > amount) {
+    
+  }
+  document.querySelector('#boxes').lastChild.offsetWidth
 }
 
 function createBoxes(amount) {
@@ -27,7 +37,6 @@ function createBoxes(amount) {
     addBox.style.width = firstBoxSize + "px"
     addBox.style.backgroundColor = getRandomHexColor();
     refs.boxesList.append(addBox);
-        
   }
 }
   
